@@ -46,9 +46,12 @@
         </div>
     </div>
 
+    <div class="theme-adjuster">
+        <i class="fas fa-moon"></i>
+    </div>
+
     <div class="context">
         <div class="home">
-
             <h3 class="greeting">Hi there!</h3>
             <h1 class="myname">I'M RUVINDU MADHUSHANKA</h1>
             <p class="myposition">Reading for Bachelor of Information
@@ -260,7 +263,8 @@
                             <div><i class="fas fa-leaf" aria-hidden="true" style="color: yellowgreen;"></i> Nature</div>
                             <div><i class="fas fa-plane" aria-hidden="true" style="color: skyblue;"></i> Traveling</div>
                             <div><i class="fas fa-snowflake" aria-hidden="true" style="color: azure;""></i> Play Badminton</div>
-                            <div><i class="fas fa-headphones" aria-hidden="true" style="color: gold;"></i> listening to
+                            <div><i class=" fas fa-headphones" aria-hidden="true" style="color: gold;"></i> listening
+                                to
                                 music
                             </div>
                         </div>
@@ -1458,5 +1462,54 @@
     // preloader
     $(document).ready(function () {
         $(".preloader").fadeOut("slow");
+    });
+
+
+
+
+    // theme 
+    $(document).ready(function () {
+
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            var is_system_dark = 1;
+            var dark = 1;
+        } else {
+            var is_system_dark = 0;
+            var dark = 0;
+        }
+
+
+        if (is_system_dark) {
+            $(".theme-adjuster i").removeClass('fa-sun');
+            $(".theme-adjuster i").addClass('fa-moon');
+        } else {
+            $(".theme-adjuster i").removeClass('fa-moon');
+            $(".theme-adjuster i").addClass('fa-sun');
+        }
+
+        $('.theme-adjuster i').on('click', function () {
+            if (dark == 0) {
+                $("body").css("background", "url(../imageS/bg_dark.jpg)");
+                $("body").css("background-attachment", "fixed");
+                $("body").css("background-size", "cover");
+                $("body").css("background-repeat", "no-repeat");
+
+                $(".theme-adjuster i").removeClass('fa-sun');
+                $(".theme-adjuster i").addClass('fa-moon');
+
+                dark = 1;
+            } else {
+                $("body").css("background", "url(../imageS/bg_light.jpg)");
+                $("body").css("background-attachment", "fixed");
+                $("body").css("background-size", "cover");
+                $("body").css("background-repeat", "no-repeat");
+
+                $(".theme-adjuster i").removeClass('fa-moon');
+                $(".theme-adjuster i").addClass('fa-sun');
+
+                dark = 0;
+            }
+
+        });
     });
 </script>
