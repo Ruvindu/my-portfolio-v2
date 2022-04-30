@@ -1489,20 +1489,17 @@
 
         $('.theme-adjuster i').on('click', function () {
             if (dark == 0) {
-                $("body").css("background", "url(../imageS/bg_dark.jpg)");
-                $("body").css("background-attachment", "fixed");
-                $("body").css("background-size", "cover");
-                $("body").css("background-repeat", "no-repeat");
+                $("body").removeClass('backdrop-light');
+                $("body").addClass('backdrop-dark');
+
 
                 $(".theme-adjuster i").removeClass('fa-sun');
                 $(".theme-adjuster i").addClass('fa-moon');
 
                 dark = 1;
             } else {
-                $("body").css("background", "url(../imageS/bg_light.jpg)");
-                $("body").css("background-attachment", "fixed");
-                $("body").css("background-size", "cover");
-                $("body").css("background-repeat", "no-repeat");
+                $("body").removeClass('backdrop-dark');
+                $("body").addClass('backdrop-light');
 
                 $(".theme-adjuster i").removeClass('fa-moon');
                 $(".theme-adjuster i").addClass('fa-sun');

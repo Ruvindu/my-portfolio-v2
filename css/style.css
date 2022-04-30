@@ -890,27 +890,27 @@ footer p {
   opacity: 0.4;
   font-size: smaller;
 }
-/* background */
 
+/* background */
 body {
-  background: url("../imageS/bg_light.jpg");
+  background: url("../images/bg_light.jpg");
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
+
+
+
 @media screen and (prefers-color-scheme: dark) {
   body {
-    background: url("../imageS/bg_dark.jpg");
+    background: url("../images/bg_dark.jpg");
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
   }
 }
 
-/* *{
-     border: 1px solid red;
- } */
 
 .theme-adjuster {
   position: absolute;
