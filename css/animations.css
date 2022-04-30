@@ -808,7 +808,7 @@
 .greeting {
   animation-name: shake;
   animation-duration: 1s;
-  animation-iteration-count: infinite;
+  animation-iteration-count: 15;
 }
 
 @keyframes shake {
