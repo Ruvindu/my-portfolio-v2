@@ -84,9 +84,12 @@ body {
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   box-shadow: 3 6px 10px 0 rgba(0, 0, 0, 0.37);
-  margin: 4px;
-  padding: 13px;
+  margin: 2px;
+  padding: 15px;
   cursor: pointer;
+  width: 64px;
+  height: 64px;
+  user-select: none;
 }
 /* Tooltip container */
 
@@ -104,6 +107,7 @@ body {
   opacity: 0;
   transform: scaleY(0.5);
   transition: opacity 0.2s, transform 0.2s;
+  user-select: none;
 }
 
 .navgation div:hover .tooltiptext {
